@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe8f0">
+<title>A Little Surprise for Bhumi 💗</title>
+<style>
+:root{--pink:#d96f98;--deep:#9b4569;--pale:#fff0f5;--ink:#704456}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(150deg,#fff7fa,#ffe5ee 55%,#fff8fb);color:var(--ink);font-family:Georgia,serif;text-align:center;overflow-x:hidden}
+section{padding:64px 18px;position:relative}
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 20px}
+.eyebrow{font:11px/1.5 Arial,sans-serif;letter-spacing:4px;color:#b56a87}
+h1{font-size:clamp(46px,11vw,78px);font-weight:normal;color:var(--pink);margin:16px 0}
+h2{font-size:clamp(27px,6vw,38px);font-weight:normal;color:var(--deep);margin:0 0 18px}
+p{font-size:17px;line-height:1.8;max-width:540px;margin:12px auto}
+button{border:0;border-radius:40px;background:var(--pink);color:white;padding:14px 24px;font-size:15px;cursor:pointer;margin:12px 5px;box-shadow:0 8px 22px #cf789944}
+button:active{transform:scale(.98)}
+.card{width:min(100%,570px);margin:22px auto;padding:30px 23px;background:#ffffffc9;border:1px solid #f4c4d5;border-radius:25px;box-shadow:0 12px 35px #a75c7720}
+.big-heart{font-size:38px;animation:beat 1.25s infinite}
+@keyframes beat{50%{transform:scale(1.2)}}
+.hidden{display:none!important}
+.envelope{font-size:76px;cursor:pointer;margin:10px}
+.letter{white-space:pre-line;text-align:left;line-height:1.95;font-size:16px}
+.cake{font-size:88px;margin:20px}
+.music{background:white;border-radius:18px;padding:20px;margin:20px auto;max-width:410px}
+audio{width:100%;margin-top:12px}
+.note{font:12px/1.6 Arial,sans-serif;color:#9c7182}
+.final{min-height:70vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+footer{padding:28px 12px 40px;color:#b56a87;font-size:13px}
+.float{position:fixed;bottom:-35px;z-index:5;pointer-events:none;animation:rise 6s linear forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@media(max-width:480px){section{padding:52px 16px}.card{padding:25px 17px}p{font-size:16px}}
+</style>
+</head>
+<body>
+<section class="hero">
+  <div class="eyebrow">A LITTLE SURPRISE FOR SOMEONE SPECIAL</div>
+  <div class="big-heart">💗</div>
+  <p>Someone has made a little corner of the internet just for you...</p>
+  <h1>Hey, Bhumi!</h1>
+  <p>A little happiness, a little magic, and a birthday wish made especially for you.</p>
+  <button id="openBtn">Open Your Surprise ✨</button>
+  <p class="note">Made with care by Tushar ❤️</p>
+</section>
+
+<main id="surprise" class="hidden">
+  <section>
+    <div class="eyebrow">TODAY IS ALL ABOUT YOU</div>
+    <h1>Happy Birthday, Bhumi! 🎂</h1>
+    <p>Wishing you a year full of beautiful moments, unexpected happiness, big smiles and dreams coming true. Keep shining just the way you do. 🌷</p>
+    <div class="big-heart">💞</div>
+  </section>
+
+  <section>
+    <div class="card">
+      <div class="eyebrow">YOUR SPECIAL MONTH</div>
+      <h2>January, with a little extra magic ✨</h2>
+      <p>Your birthday is a lovely reason to celebrate you. The exact date can be added later when Tushar finds it out!</p>
+      <div style="font-size:48px;margin-top:14px">🌸 🎀 🌸</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">A LITTLE MESSAGE</div>
+    <h2>A Letter For You 💌</h2>
+    <div class="card">
+      <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the letter">💌</div>
+      <p>There is a small message waiting for you.</p>
+      <button id="letterBtn">Open My Letter</button>
+      <div id="letterBox" class="hidden">
+        <hr style="border:0;border-top:1px solid #f1bfd0;margin:20px 0">
+        <div class="letter">Dear Bhumi,
+
+I hope your birthday brings you as much happiness as your smile brings to the people around you.
+
+You deserve all the good things life has to offer: peaceful days, exciting adventures, genuine laughter and countless reasons to smile.
+
+I wanted to make something a little different for your special day, just to remind you that you are appreciated and that someone is wishing the very best for you.
+
+Keep being your lovely self. May this new year of your life be filled with beautiful surprises.
+
+Happy Birthday, Bhumi! ❤️
+
+With warm wishes,
+Tushar</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">A SONG FOR YOUR DAY</div>
+    <h2>Our Little Melody 🎶</h2>
+    <div class="music">
+      <div style="font-size:48px">🎧</div>
+      <h3 style="color:#9b4569;font-weight:normal">Heeriye</h3>
+      <p class="note">Add a legally obtained audio file named <b>heeriye.mp3</b> in the same folder as this webpage to play it here.</p>
+      <audio controls preload="none">
+        <source src="heeriye.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">MAKE A WISH</div>
+    <h2>A Cake Just For You 🎂</h2>
+    <div class="card">
+      <div class="cake" id="cake">🎂</div>
+      <p>Close your eyes, make a wish and tap the button.</p>
+      <button id="candleBtn">Blow the Candles 🕯️</button>
+      <p id="wish" class="hidden">May your sweetest wishes come true! ✨💗</p>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="big-heart">❤️</div>
+    <h1>Stay Happy, Bhumi!</h1>
+    <div class="card">
+      <h2>One Last Thing...</h2>
+      <p>Some people make ordinary days feel a little more special just by being themselves. Keep smiling, keep dreaming and never forget how wonderful you are.</p>
+      <h2 style="margin-top:24px">With love, Tushar ❤️</h2>
+    </div>
+    <p class="note">A little birthday surprise, made especially for you.</p>
+  </section>
+</main>
+
+<footer>Made with 💗 for Bhumi · January Birthday Surprise</footer>
+
+<script>
+const openBtn = document.getElementById('openBtn');
+const main = document.getElementById('surprise');
+openBtn.addEventListener('click', () => {
+  main.classList.remove('hidden');
+  openBtn.textContent = 'Surprise Opened 💗';
+  document.querySelector('.hero').scrollIntoView({behavior:'smooth'});
+  makeHearts();
+});
+
+function openLetter(){
+  document.getElementById('letterBox').classList.toggle('hidden');
+  document.getElementById('envelope').textContent =
+    document.getElementById('letterBox').classList.contains('hidden') ? '💌' : '💖';
+}
+document.getElementById('letterBtn').addEventListener('click',openLetter);
+document.getElementById('envelope').addEventListener('click',openLetter);
+document.getElementById('envelope').addEventListener('keydown',e=>{
+  if(e.key==='Enter'||e.key===' '){e.preventDefault();openLetter();}
+});
+
+document.getElementById('candleBtn').addEventListener('click',()=>{
+  document.getElementById('cake').textContent='🍰';
+  document.getElementById('wish').classList.remove('hidden');
+  makeHearts();
+});
+
+function makeHearts(){
+  const symbols=['💗','💕','💖','🌸','✨'];
+  for(let i=0;i<18;i++){
+    const el=document.createElement('span');
+    el.className='float';
+    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    el.style.left=Math.random()*100+'vw';
+    el.style.fontSize=(16+Math.random()*18)+'px';
+    el.style.animationDuration=(4+Math.random()*4)+'s';
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),8500);
+  }
+}
+</script>
+</body>
+</html>
